@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Enter Student Number:</h3>
+    <input type="text" id="studentNumber" placeholder="Enter Number">
+    <button onclick="showDeviceInfo()">Submit</button>
+    
+    <div id="deviceInfo" style="margin-top: 20px;"></div>
+
+    <script>
+      function showDeviceInfo() {
+        var studentNumber = document.getElementById('studentNumber').value;
+        var deviceInfo = document.getElementById('deviceInfo');
+
+        // Example data: if student number is 67890, show specific info
+        if (studentNumber === "67890") {
+          deviceInfo.innerHTML = "Model#: G11 <br> Manufacturer: Dell";
+        } else {
+          deviceInfo.innerHTML = "No information found for this student number.";
+        }
+      }
+    </script>
+  </body>
+</html>
