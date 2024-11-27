@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function searchStudent() {
+          var searchTerm = document.getElementById("searchBox").value.toLowerCase();
+          var list = [
+            { studentNumber: "12345", model: "G11", manufacturer: "Dell" },
+            { studentNumber: "67890", model: "G11", manufacturer: "Dell" }
+          ];
+      
+          var result = list.filter(function(item) {
+            return item.studentNumber === searchTerm;
+          });
+      
+          if (result.length > 0) {
+            document.getElementById("result").innerHTML =
+              "Model Number: " + result[0].model + "<br>Manufacturer: " + result[0].manufacturer;
+          } else {
+            document.getElementById("result").innerHTML = "No results found.";
+          }
+        }
+      </script>
+      
+</body>
+</html>
